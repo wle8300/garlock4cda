@@ -122,7 +122,7 @@ export default class Menu extends Component {
             height: 100vh;
             background: #062c5a;
             color: white;
-            opacity: ${this.props.isMenuActive ? 0.93 : 0};
+            opacity: ${this.props.isMenuActive ? 0.97 : 0};
             transition: opacity 500ms ease-out;
             @media (max-width: ${breakpoints.md}px) {
               z-index: ${this.props.isMenuActive ? 3 : -2};
