@@ -46,7 +46,7 @@ function App() {
         >
           {/* Logo */}
           <div>
-            <a
+            <div
               href="/"
               css={`
                 display: inline-block;
@@ -55,6 +55,7 @@ function App() {
                 height: 7rem;
                 background: url(${imgLogo}) center center no-repeat;
                 background-size: contain;
+                cursor: pointer;
                 &:hover {
                   opacity: 0.9;
                 }
@@ -68,7 +69,7 @@ function App() {
             `}
           >
             <a
-              href="#"
+              href="/who-i-am"
               css={`
                 display: block;
                 margin-right: 2rem;
@@ -90,7 +91,7 @@ function App() {
               Who I am
             </a>
             <a
-              href="#"
+              href="/get-involved"
               css={`
                 display: block;
                 margin-right: 2rem;
@@ -112,7 +113,7 @@ function App() {
               Get Involved
             </a>
             <a
-              href="#"
+              href="/donate"
               css={`
                 display: block;
                 margin-right: 2rem;
