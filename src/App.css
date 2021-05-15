@@ -1,4 +1,6 @@
-
+html, body {
+  background: hsl(212deg 34% 32% / 100%);
+}
 
 .App-logo {
   height: 40vmin;
