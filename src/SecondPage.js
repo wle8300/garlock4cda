@@ -33,7 +33,8 @@ export default class FirstPage extends Component {
                 margin-bottom: 18px;
               }
               @media (max-width: ${breakpoints.sm}px) {
-                margin: 100px auto;
+                margin: 100px auto 0;
+                padding: 30px 16px 200px;
                 & div {
                   font-size: 21px;
                 }

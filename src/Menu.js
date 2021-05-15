@@ -121,11 +121,12 @@ export default class Menu extends Component {
               top: 0;
               right: 0;
               width: 100vw;
-              height: ${this.props.isMenuActive ? "100vh" : "0vh"};
+              height: 100vh;
+              transform: translateY(${this.props.isMenuActive ? '0vh' : '-100vh'});
               background: #062c5a;
               color: white;
               opacity: ${this.props.isMenuActive ? 0.97 : 0};
-              transition: opacity 500ms ease-out;
+              transition: opacity 250ms ease-out;
               @media (max-width: ${breakpoints.md}px) {
                 z-index: ${this.props.isMenuActive ? 3 : -2};
               }

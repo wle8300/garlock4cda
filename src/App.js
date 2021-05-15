@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Flex from "./Flex";
 import "./App.css";
-import imgWave from "./images/wave.svg";
 import imgLogo from "./images/logo.svg";
 import Menu from "./Menu";
 import "styled-components/macro";
@@ -30,9 +29,6 @@ class App extends Component {
           {/* 1st Window w/ Wave BG */}
           <div
             css={`
-              background: ${isLandingPage
-                ? `hsl(212deg 34% 32% / 86%) url(${imgWave}) center center no-repeat`
-                : "hsl(212deg 34% 32% / 100%)"};
               min-height: 100vh;
               background-attachment: fixed;
               background-size: cover;
@@ -96,7 +92,7 @@ class App extends Component {
 
           <div
             css={`
-              z-index: ${isLandingPage ? 1 : -1};
+              z-index: 1;
               width: 100vw;
               position: fixed;
               bottom: 0;
