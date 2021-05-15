@@ -7,7 +7,7 @@ import Menu from "./Menu";
 import "styled-components/macro";
 import FirstPage from "./FirstPage";
 import SecondPage from "./SecondPage";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const { breakpoints } = require("./design-system");
 
@@ -41,7 +41,7 @@ class App extends Component {
             {/* Navbar */}
             <Flex
               css={`
-                z-index: 2;
+                z-index: 3;
                 position: fixed;
                 top: 0;
                 justify-content: space-between;
@@ -75,7 +75,7 @@ class App extends Component {
                       height: 5rem;
                     }
                   `}
-                />
+                >&nbsp;</a>
               </div>
               {/* Menu items */}
               <Menu

@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import "styled-components/macro";
 
-import imgWaveMini from "./images/wave-2.svg";
-import imgPortrait from "./images/portrait.png";
-import imgGradientBg from "./images/gradient-bg.png";
-import DonateButton from "./DonateButton";
-import Flex from "./Flex";
 import { BrowserRouter as Router } from "react-router-dom";
 
 const { breakpoints } = require("./design-system");

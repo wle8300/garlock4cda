@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "styled-components/macro";
 import ButtonZeroCSS from "./ButtonZeroCSS";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 const { breakpoints } = require("./design-system");
 
 export default class DonateButton extends Component {
