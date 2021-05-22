@@ -47,8 +47,10 @@ export default class Menu extends Component {
             >
               Why I'm Running
             </a>
-            {/* <a
-            href="/to-question-is-dumb"
+            <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
             css={`
               display: block;
               margin-right: 2rem;
@@ -67,8 +69,9 @@ export default class Menu extends Component {
               }
             `}
           >
-            No Question Is Dumb™
+            Donate
           </a>
+          {/* 
           <a
             href="/donate"
             css={`

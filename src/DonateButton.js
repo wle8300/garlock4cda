@@ -28,13 +28,15 @@ export default class DonateButton extends Component {
           `}
         >
           <a
-            href="/why-im-running"
+            target="_blank"
+            rel="noreferrer"
+            href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
             css={`
               color: #1b4372;
               text-decoration: none;
             `}
           >
-            Why I'm Running
+            Donate today
           </a>
         </ButtonZeroCSS>
       </Router>
