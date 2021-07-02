@@ -67,7 +67,7 @@ export default class FirstPage extends Component {
               that process. Let’s keep Coeur d’Alene, the Coeur d’Alene.
             </div>
             <div>
-              Do we want to live in a city of high-rise condos andifram apartments?
+              Do we want to live in a city of high-rise condos and apartments?
               Do we want to lose our family neighborhoods? We are at a point
               when we must decide if we will continue to let the developers and
               their agencies set the course for our city or if we, you and me,
@@ -109,8 +109,8 @@ export default class FirstPage extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       this.setState({ isAnimated: true });
-    }, 1);
+    });
   }
 }

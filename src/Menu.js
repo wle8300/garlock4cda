@@ -48,30 +48,30 @@ export default class Menu extends Component {
               Why I'm Running
             </a>
             <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
-            css={`
-              display: block;
-              margin-right: 2rem;
-              padding: 0.55rem 1.2rem;
-              font-weight: 600;
-              font-size: 1.2rem;
-              color: white;
-              background: rgb(14 40 74 / 90%);
-              border-radius: 2rem;
-              text-decoration: none;
-              transition: background 200ms ease-out;
-              border: 1px solid transparent;
-              &:hover {
-                background: #002b61;
-                border: 1px solid rgb(59 118 194);
-              }
-            `}
-          >
-            Donate
-          </a>
-          {/* 
+              target="_blank"
+              rel="noreferrer"
+              href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
+              css={`
+                display: block;
+                margin-right: 2rem;
+                padding: 0.55rem 1.2rem;
+                font-weight: 600;
+                font-size: 1.2rem;
+                color: white;
+                background: rgb(14 40 74 / 90%);
+                border-radius: 2rem;
+                text-decoration: none;
+                transition: background 200ms ease-out;
+                border: 1px solid transparent;
+                &:hover {
+                  background: #002b61;
+                  border: 1px solid rgb(59 118 194);
+                }
+              `}
+            >
+              Donate
+            </a>
+            {/* 
           <a
             href="/donate"
             css={`
@@ -114,6 +114,10 @@ export default class Menu extends Component {
               toggle={this.props.toggleMenu}
               color="#FFFFFF"
               size={35}
+              css={`
+                position: relative;
+                z-index: 10000;
+              `}
             />
           </div>
 
@@ -125,7 +129,9 @@ export default class Menu extends Component {
               right: 0;
               width: 100vw;
               height: 100vh;
-              transform: translateY(${this.props.isMenuActive ? '0vh' : '-100vh'});
+              transform: translateY(
+                ${this.props.isMenuActive ? "0vh" : "-100vh"}
+              );
               background: #062c5a;
               color: white;
               opacity: ${this.props.isMenuActive ? 0.97 : 0};
@@ -182,14 +188,25 @@ export default class Menu extends Component {
                 No Question Is Dumb™
               </a>
             </ButtonZeroCSS> */}
-              {/* <ButtonZeroCSS
-              css={`
-                color: white;
-                font-weight: bold;
-              `}
-            >
-              <a href="/#" css={`color: white; text-decoration: none;`}>Donate</a>
-            </ButtonZeroCSS> */}
+              <ButtonZeroCSS
+                css={`
+                  color: white;
+                  font-weight: bold;
+                `}
+              >
+                <a
+                  href="/#"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
+                  css={`
+                    color: white;
+                    text-decoration: none;
+                  `}
+                >
+                  Donate
+                </a>
+              </ButtonZeroCSS>
             </Flex>
             <ButtonZeroCSS
               css={`
