@@ -18,8 +18,10 @@ export default class FirstPage extends Component {
             height: 100%;
             transform: translateY(${this.state.isAnimated ? "0px" : "30px"});
             opacity: ${this.state.isAnimated ? 1 : 0};
-            transition: transform 250ms ease-out, opacity 250ms ease-out;
+            transition: transform 250ms ease-out, opacity 250ms ease-out,
+              filter 250ms ease-out;
             background: hsl(212deg 34% 32% / 100%);
+            filter: blur(${this.props.isMenuActive ? 20 : 0}px);
           `}
         >
           <div
@@ -49,7 +51,7 @@ export default class FirstPage extends Component {
                 font-size: 39px;
               `}
             >
-              Why I'm Running
+              Who I Am
             </h2>
             <div>
               I am Roger Garlock and I’m running for City Council, Seat 2. We

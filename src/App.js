@@ -16,8 +16,7 @@ class App extends Component {
   };
 
   render() {
-
-    const isLandingPage = window.location.pathname === "/"
+    const isLandingPage = window.location.pathname === "/";
 
     return (
       <Router>
@@ -62,6 +61,7 @@ class App extends Component {
                     background: url(${imgLogo}) center center no-repeat;
                     background-size: contain;
                     cursor: pointer;
+                    text-decoration: none;
                     &:hover {
                       opacity: 0.9;
                     }
@@ -71,7 +71,9 @@ class App extends Component {
                       height: 5rem;
                     }
                   `}
-                >&nbsp;</a>
+                >
+                  &nbsp;
+                </a>
               </div>
               {/* Menu items */}
               <Menu
@@ -82,10 +84,10 @@ class App extends Component {
 
             <Switch>
               <Route path="/why-im-running">
-                <SecondPage />
+                <SecondPage isMenuActive={this.state.isMenuActive} />
               </Route>
               <Route path="/">
-                <FirstPage />
+                <FirstPage isMenuActive={this.state.isMenuActive} />
               </Route>
             </Switch>
           </div>
@@ -100,7 +102,7 @@ class App extends Component {
               font-size: 18px;
               font-family: "Bebas Neue", sans-serif;
               color: white;
-              opacity: 36%;
+              mix-blend-mode: overlay;
             `}
           >
             <Flex>Paid for by Garlock4CDA, Richard Price, Treasurer</Flex>

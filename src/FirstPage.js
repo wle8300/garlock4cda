@@ -15,7 +15,12 @@ const { breakpoints } = require("./design-system");
 export default class FirstPage extends Component {
   render() {
     return (
-      <div>
+      <div
+        css={`
+          filter: blur(${this.props.isMenuActive ? 20 : 0}px);
+          transition: filter 250ms ease-out;
+        `}
+      >
         {/* 1st Window w/ CDA resort BG */}
         <ImageFadeIn
           src={imgCoeurDAleneResort}
@@ -121,6 +126,8 @@ export default class FirstPage extends Component {
               loadAsBackgroundImage
               src={imgPortrait}
               css={`
+                position: relative;
+                top: 0;
                 display: inline-block;
                 width: 40rem;
                 height: 51rem;
@@ -135,6 +142,9 @@ export default class FirstPage extends Component {
                 }
                 @media (max-width: ${breakpoints.md}px) {
                   transform: rotateY(180deg);
+                }
+                @media (max-width: ${breakpoints.sm}px) {
+                  top: -10vh;
                 }
               `}
             />
