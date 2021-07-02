@@ -195,7 +195,6 @@ export default class Menu extends Component {
                 `}
               >
                 <a
-                  href="/#"
                   target="_blank"
                   rel="noreferrer"
                   href="https://secure.anedot.com/garlock4cda/city-council-seat-2"
