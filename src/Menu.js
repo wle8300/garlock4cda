@@ -98,10 +98,11 @@ export default class Menu extends Component {
 
           <div
             css={`
-              display: none;
+              z-index: 10000 !important;
               position: absolute;
               top: 0;
               right: 0;
+              display: none;
               margin: 1.3rem;
               @media (max-width: ${breakpoints.md}px) {
                 display: block;
@@ -114,10 +115,6 @@ export default class Menu extends Component {
               toggle={this.props.toggleMenu}
               color="#FFFFFF"
               size={35}
-              css={`
-                position: relative;
-                z-index: 10000;
-              `}
             />
           </div>
 

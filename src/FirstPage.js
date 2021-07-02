@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ImageFadeIn from "react-image-fade-in";
 import "styled-components/macro";
 
 import imgCoeurDAleneResort from "./images/coeur-d-alene-resort.jpg";
@@ -16,7 +17,8 @@ export default class FirstPage extends Component {
     return (
       <div>
         {/* 1st Window w/ CDA resort BG */}
-        <div
+        <ImageFadeIn
+          src={imgCoeurDAleneResort}
           css={`
             z-index: -1;
             position: absolute;
@@ -24,19 +26,19 @@ export default class FirstPage extends Component {
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: url(${imgCoeurDAleneResort}) center center no-repeat;
+            background: center center no-repeat;
             background-attachment: fixed;
             background-size: auto 131%;
             background-position-y: bottom;
           `}
         />
 
-        <div
+        <Flex
           css={`
             width: 100vw;
             height: 100vh;
-            background: hsl(212deg 34% 32% / 86%) url(${imgWave}) center center
-              no-repeat;
+            background: url(${imgWave}) center center no-repeat fixed
+              rgb(13 37 65 / 84%);
             background-attachment: fixed;
             background-size: cover;
           `}
@@ -45,6 +47,8 @@ export default class FirstPage extends Component {
             css={`
               position: absolute;
               bottom: 0;
+              display: flex;
+              justify-content: center;
               align-items: flex-end;
               width: 100%;
               background: url(${imgWaveMini}) center center no-repeat;
@@ -95,7 +99,7 @@ export default class FirstPage extends Component {
             </div>
 
             {/* Gradient that provides contrast
-            for slogan */}
+            for slogan in mobile mode */}
             <div
               css={`
                 z-index: 1;
@@ -113,13 +117,16 @@ export default class FirstPage extends Component {
             />
 
             {/* Big portrait of Garlock */}
-            <div
+            <ImageFadeIn
+              loadAsBackgroundImage
+              src={imgPortrait}
               css={`
                 display: inline-block;
                 width: 40rem;
                 height: 51rem;
                 overflow: hidden;
-                background: url(${imgPortrait}) center center no-repeat;
+                background-position: center center;
+                background-repeat: no-repeat;
                 background-size: contain;
                 background-position: bottom;
                 @media (max-width: ${breakpoints.lg}px) {
@@ -173,7 +180,7 @@ export default class FirstPage extends Component {
               <DonateButton />
             </div>
           </Flex>
-        </div>
+        </Flex>
       </div>
     );
   }
