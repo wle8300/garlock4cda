@@ -9,7 +9,7 @@ import SecondPage from "./SecondPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const { breakpoints } = require("./design-system");
- 
+   
 class App extends Component {
   state = {
     isMenuActive: false,
